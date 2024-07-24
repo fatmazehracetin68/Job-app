@@ -6,6 +6,7 @@ import Card from "../components/Card";
 
 const JobList = ({ retry }) => {
   const { jobs, isLoading, error } = useSelector((store) => store.jobReducer);
+  const isArray = Array.isArray(jobs);
 
   return (
     <div className="list-page">
